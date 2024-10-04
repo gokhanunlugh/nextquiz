@@ -49,7 +49,7 @@ function DarkMode() {
   }, [theme])
 
   return (
-    <div className="headerInside">
+    <div className="themeSwitch">
       <img src="/img/lightM.svg" alt="" />
 
       <label className="switch">
