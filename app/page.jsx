@@ -147,9 +147,9 @@ function Questions({ genre, setGenre, currentQuestion, setCurrentQuestion }) {
           <div className="container">
             <header>
               <div className="logo">
-                {<img src={genre.icon} />}
+                {<img src={genre.icon} />} {<p>{genre.category}</p>}
               </div>
-              { }
+              <DarkMode />
             </header>
 
             <div className="content">
@@ -198,7 +198,7 @@ function EndPage({ score, genre, setGenre, setCurrentQuestion }) {
         <div className="logo">
           {<img src={genre.icon} />}
         </div>
-        { }
+        <DarkMode />
       </header>
 
       <div className="content">
@@ -214,7 +214,7 @@ function EndPage({ score, genre, setGenre, setCurrentQuestion }) {
             <p>out of 10</p>
           </div>
 
-          <button onClick={handlePlayAgain}>Play Again</button>
+          <button className="submit" onClick={handlePlayAgain}>Play Again</button>
         </div>
       </div>
     </div>
