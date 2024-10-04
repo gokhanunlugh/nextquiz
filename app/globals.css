@@ -105,7 +105,7 @@ h2 {
   font-weight: 300;
   line-height: 40px;
   text-align: left;
-
+  color: #313E51;
 }
 
 h2:nth-child(2) {
@@ -142,6 +142,7 @@ h2:nth-child(2) {
   border: none;
   background: none;
   gap: 16px;
+  color: #313E51;
 }
 
 
@@ -193,7 +194,7 @@ button:hover {
   line-height: 21px;
   text-align: left;
   margin-bottom: 12px;
-
+  
 }
 
 .questions h3 {
@@ -201,7 +202,7 @@ button:hover {
   font-weight: 500;
   line-height: 24px;
   text-align: left;
-
+  color: #313E51;
 }
 
 .questions {
@@ -211,6 +212,7 @@ button:hover {
 .selected {
   border: 3px solid #A729F5;
   border-radius: 12px;
+
 }
 
 .answer span {
@@ -220,6 +222,7 @@ button:hover {
   width: 40px;
   display: block;
   text-align: center;  
+  color: #626C7F;
 }
 
 
@@ -228,8 +231,13 @@ button:hover {
   margin-bottom: 12px;
 }
 
+.answerOption {
+  color: #313E51;
+}
+
 .selected span {
   background-color: #A729F5;
+  color: white;
 }
 
 
@@ -289,6 +297,10 @@ gap: 16px;
   gap: 16px;
 }
 
+.logo p {
+  color: #313E51;
+}
+
 .correctAnswer {
   border: 3px solid #26D782;
 }
@@ -318,4 +330,99 @@ body {
   background-size: cover;
   background-color: #313E51;
   color: white;
+}
+
+@media (width >= 768px) {
+
+  .container {
+    width: 768px;
+    padding: 64px;
+  }
+
+  .submit {
+    width: 640px !important;
+    padding: 32px 217px;
+    justify-content: center;
+  }
+
+  h2 {
+    font-size: 64px ;
+    margin-bottom: 12px;
+  }
+
+  h3 {
+    font-size: 64px ;
+  }
+
+  .context p {
+    font-size: 20px;
+    line-height: 30px;
+  }
+
+  .categories button {
+    font-size: 28px;
+    line-height: 28px;
+  }
+
+  .questions h3 {
+    font-size: 36px;
+    line-height: 43px;
+  }
+
+  .answerOption {
+    font-size: 28px;
+    line-height: 28px;
+   
+  }
+
+  .answer span {
+    font-size: 28px;
+    line-height: 28px;
+  }
+
+  .logo p {
+    font-size: 28px;
+    line-height: 28px;
+    font-weight: 600;
+  }
+}
+
+
+@media(width >= 1440px) {
+
+  .container {
+    width: 1160px;
+    padding: 0;
+  }
+
+  .content {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  header {
+    margin-bottom: 99px;
+    padding-top: 83px;
+  }
+
+  .answer {
+    width: 564px;
+  }
+  .answer button {
+    width: 564px;
+  }
+
+  .submit {
+    width: 564px !important;
+  }
+
+  .completeText h2 {
+    font-size: 64px !important;
+    margin-bottom: 20px;
+  }
+  .completeText h2:last-child {
+    font-weight: 500;
+  }
+
+
 }
