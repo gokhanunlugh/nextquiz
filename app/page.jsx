@@ -39,6 +39,24 @@ export default function Home() {
 
 
 function Questions({genre, setGenre, currentQuestion, setCurrentQuestion}) {
+  const [userAnswer, setUserAnswer] = useState(null);
+  const [submitted, setSubmitted] = useState(false);
+  const [isSelectedAnswer, setIsSelectedAnswer] = useState(true);
+
+  function handleAnswerSelect(e) {
+    if (!submitted) {
+      const allAnswers = document.querySelectorAll('.answer');
+      allAnswers.forEach((answer) => answer.classList.remove('selected'));
+
+      const selectedAnswer = e.currentTarget;
+      selectedAnswer.classList.add('selected');
+    }
+
+    const handleAnswer = (x) => {
+      if(!submitted) {
+        setUserAnswer(x);
+      }
+    }
   
   return (
     <>
@@ -64,9 +82,17 @@ function Questions({genre, setGenre, currentQuestion, setCurrentQuestion}) {
               </button>
             </div>
           ))}
+
+          {!submitted ?
+            <button className='submit' onClick={handleSubmit}>Submit Answer</button>:
+            <button className='submit' onClick={handleNextQuestion}>Next Question</button>
+          }
+
+          {!isSelectedAnswer && <p className="error"><img src="./assets/images/select-error.png" alt="" /> Please select an answer</p>}
+
         </div>
       </div>
     </div>
     </>
   )
-}
+}}
