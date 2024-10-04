@@ -1,5 +1,6 @@
 "use client"
 import data from '@/app/data.json'
+import { Span } from 'next/dist/trace';
 import { useState } from 'react';
 
 export default function Home() {
@@ -30,14 +31,14 @@ export default function Home() {
       </div>
     </div>
     :
-    <Questions genre={genre} setGenre={setGenre} question={question} setQuestion={setQuestion} />
+    <Questions genre={genre} setGenre={setGenre} currentQuestion={currentQuestion} setCurrentQuestion={setCurrentQuestion} />
     }
     </>
   );
 }
 
 
-function Questions({genre, setGenre, question, setQuestion}) {
+function Questions({genre, setGenre, currentQuestion, setCurrentQuestion}) {
   
   return (
     <>
@@ -48,6 +49,23 @@ function Questions({genre, setGenre, question, setQuestion}) {
         </div>
         {}
       </header>
+
+      <div className="content">
+        <div className="questions">
+          <p>Question {currentQuestion +1} of 10</p>
+          <h3>{genre.questions[currentQuestion].question}</h3>
+        </div>
+        <div className="answers">
+          {genre.questions[currentQuestion].options.map((x,i) => (
+            <div onClick={handleAnswerSelect}  className="answer">
+              <button onClick={() => handleAnswer(x)}>
+                <p>{i === 0 && <span>A</span> || i === 1 && <span>B</span> || i === 2 && <span>C</span> || i === 3 && <span>D</span>}</p>
+                <p>{x}</p>
+              </button>
+            </div>
+          ))}
+        </div>
+      </div>
     </div>
     </>
   )
