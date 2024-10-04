@@ -1,9 +1,13 @@
 import data from '@/app/data.json'
+import { useState } from 'react/cjs/react.production.min';
 
 export default function Home() {
+  const [genre, setGenre] = useState([]);
   return (
     <>
-    <div className="container">
+    {
+      genre.length ===0 ?
+      <div className="container">
       <header>
         <div className="logo"></div>
         {}
@@ -19,7 +23,9 @@ export default function Home() {
         </div>
       </div>
     </div>
-    
+    :
+    <Questions />
+    }
     </>
   );
 }
