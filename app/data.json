@@ -2,7 +2,7 @@
     "questionAndAnswers": [
         {
             "category": "HTML",
-            "icon": "./assets/images/html-logo.png",
+            "icon": "/img/htmlLogo.png",
             "questions": [
             {
                 "question": "What does HTML stand for?",
@@ -74,7 +74,7 @@
 
         {
             "category": "CSS",
-            "icon": "./assets/images/css-logo.png",
+            "icon": "/img/cssLogo.png",
             "questions": [
             {
                 "question": "Which CSS property controls the text size?",
@@ -141,7 +141,7 @@
 
         {
             "category": "JavaScript",
-            "icon": "./assets/images/javascript-logo.png",
+            "icon": "/img/jsLogo.png",
             "questions": [
             {
                 "question": "Which company developed JavaScript?",
@@ -223,7 +223,7 @@
 
         {
             "category": "Accessibility",
-            "icon": "./assets/images/accessibility-logo.png",
+            "icon": "/img/accLogo.png",
             "questions": [
             {
                 "question": "What does ARIA stand for?",
